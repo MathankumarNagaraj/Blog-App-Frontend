@@ -53,7 +53,7 @@ function Blogs() {
             const response = await axios.patch(`https://blog-app-backend-1-1yu5.onrender.com/blogs/like/${blog_id}`);
             // After successfully updating the likes count in the backend, fetch the updated list of blogs
             if (response.status === 200) {
-                axios.get("http://localhost:5000/api/blogs").then((res) => {
+                axios.get("https://blog-app-backend-1-1yu5.onrender.com/blogs").then((res) => {
                     console.log(res.data)
                     setBlogs(res.data)
                 }).catch(() => {
